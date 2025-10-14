@@ -1,14 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Header & NavBar</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
 </head>
-ggdfgnbfghbnjmnbfcfhngb dhanush bm 
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple HTML document.</p>
+     
+
+
+  <!-- Header -->
+  <header>
+    <div class="profile" id="profileIcon">
+      <i class="fa-solid fa-user"></i>
+    </div>
+
+    <div class="icon help" id="helpIcon">
+      <i class="fa-solid fa-circle-question"></i>
+    </div>
+  </header>
+
+
+  <!-- Page Content Placeholder -->
+  <div class="content">
+    <div class="card1">
+    <h1>Smart-E-Bin</h1>
+     <br>
+    <h2>Why Proper E-Waste Disposal Matters</h2>
+    <br>
+    <p>Smart-E-Bin is dedicated to tackling the growing challenge of electronic waste<br> by providing a smart and convenient way to dispose of unused gadgets. </p>
+
+    </div>
+   
+  </div>
+  <!-- Carousel -->
+  <div class="carousel">
+  <div class="carousel-track">
+    <img src="https://res.cloudinary.com/dvf6yetek/image/upload/v1760375101/Gemini_Generated_Image_io51vpio51vpio51_cuhiey.png" >
+    <img src="https://res.cloudinary.com/dvf6yetek/image/upload/v1760462078/WhatsApp_Image_2025-10-14_at_17.08.19_bbd3519a_e3mjlx.jpg"/>
+    <img src="https://res.cloudinary.com/dvf6yetek/image/upload/v1760442296/scanning_ircqxa.jpg" >
+    <img src="https://res.cloudinary.com/dvf6yetek/image/upload/v1760442314/putting_afvb4p.jpg" >
+    <img src="https://res.cloudinary.com/dvf6yetek/image/upload/v1760441411/Gemini_Generated_Image_e9h895e9h895e9h8_efsuep.png" >
+  </div>
+</div>
+
+
+  
+
+  
+    <!-- Function Keys Container -->
+    <div class="function-container">
+      <div class="function-key" id="scanner-icon">
+        <i class="fa-solid fa-qrcode" ></i>
+        <span>Scan QR</span>
+      </div>
+      <div class="function-key" id="rewardsIcon">
+        <i class="fa-solid fa-gift"></i>
+        <span>Rewards</span>
+      </div>
+      <a href="submit.html" style="text-decoration: none; color: inherit;">
+      <div class="function-key" id="submitEwaste">
+        <i class="fa-solid fa-recycle"></i>
+        <span>Submit E-waste</span>
+      </div>
+      </a>
+      <div class="function-key">
+        
+        <i class="fa-solid fa-gear" id="settingsIcon"></i>
+        <span>Settings</span>
+      </div>
+            <div class="function-key">
+              <a href="refer.html" style="text-decoration: none; color: inherit;">
+        <i class="fa-solid fa-hand-holding-dollar"></i></a>
+        <span>Refer & Earn</span>
+      </div>
+      
+      <div class="function-key">
+        <i class="fa-solid fa-trophy"></i>
+        <span>Leaderboard</span>
+      </div>
+      <div class="function-key" id="nearbyMapIcon">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Nearby E-bin</span>
+      </div>
+    </div>
+
+  </div>
+          
+  
+  <!-- Leaderboard Full Screen -->
+<div id="leaderboardScreen" class="leaderboard-screen">
+  <div class="leaderboard-header">
+    <button class="back-btn" onclick="closeLeaderboard()">←</button>
+    <h2>🏆 Leaderboard</h2>
+  </div>
+  <div class="leaderboard-body">
+    <ol id="leaderboardList">
+      <li>Ravi Kumar — 1200 pts</li>
+      <li>Anjali Sharma — 1150 pts</li>
+      <li>Rahul Mehta — 980 pts</li>
+      <li>Priya Das — 910 pts</li>
+      <li>Vikram Singh — 890 pts</li>
+      <li>Sneha Patel — 850 pts</li>
+      <li>Arjun Nair — 800 pts</li>
+      <li>Manisha Reddy — 760 pts</li>
+      <li>Dev Raj — 740 pts</li>
+      <li>Rohan Iyer — 700 pts</li>
+    </ol>
+  </div>
+</div>
+
+
+
+<!-- Rewards Fullscreen Page -->
+<div id="rewardsPopup" class="rewards-popup">
+  <button id="closeRewards" class="close-btn">← </button>
+  <h2>🎁 Rewards & Offers</h2>
+
+  <div class="scratch-card">
+    <div class="scratch-message">
+      <h3>Use Credit Cards & Get Rewards!</h3>
+      <p>Scratch below to reveal your surprise 🎉</p>
+    </div>
+    <div class="scratch-area" id="scratchArea">
+      <canvas id="scratchCanvas"></canvas>
+      <div class="reward-text">💰 You won 50 Reward Points!</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Nearby E-bin Fullscreen Popup -->
+<div id="nearbyPopup" class="nearby-popup">
+  <button id="closeNearby" class="close-btn">←</button>
+  <img id="nearbyImage" src="" alt="Nearby E-bin Map">
+</div>
+
+
+
+  <!-- Bottom Navigation Bar -->
+  <nav class="bottom-nav">
+    <div class="nav-item">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </div>
+    <div class="nav-item">
+      <a href="map.html" style="text-decoration: none; color: inherit;">
+      <i class="fa-solid fa-map"></i></a>
+      <span>Map</span>
+    </div>
+    <div class="nav-item scanner">
+      <i class="fa fa-qrcode" id="scanner-icon1"></i>
+      <span>Scan</span>
+    </div>
+    <div class="nav-item">
+      <a href="alert.html" style="text-decoration: none; color: inherit;">  
+      <i class="fa-solid fa-bell"></i></a>
+      <span>Alert</span>
+    </div>
+    <div class="nav-item">
+      <a href="history.html" style="text-decoration: none; color: inherit;">
+      <i class="fa-solid fa-clock-rotate-left"></i></a>
+      <span>History</span>
+    </div>
+  </nav>
+    <script src="script.js"></script>
+
+
+    <!-- Profile Sidebar (Left) -->
+  <div id="profileSidebar" class="sidebar left">
+    <div class="sidebar-header">
+      <img src="https://via.placeholder.com/80" alt="Profile" class="profile-pic" />
+      <h3>John Doe</h3>
+      <p>john.doe@gmail.com</p>
+    </div>
+    <ul class="sidebar-menu">
+      <li><i class="fa-solid fa-gear"></i> Settings</li>
+      <li><i class="fa-solid fa-circle-question"></i> Help</li>
+      <li><i class="fa-solid fa-gift"></i> Rewards</li>
+      <li><i class="fa-solid fa-clock-rotate-left"></i> History</li>
+    </ul>
+  </div>
+
+
+
+
+<!-- Settings Fullscreen Popup -->
+<div id="settingsPopup" class="settings-popup">
+  <button id="closeSettings" class="close-btn">← Back</button>
+  <h2>⚙️ Settings</h2>
+
+  <div class="settings-list">
+    <div class="setting-item">
+      <label for="notifications">Notifications</label>
+      <input type="checkbox" id="notifications" checked>
+    </div>
+
+    <div class="setting-item">
+      <label for="darkMode">Dark Mode</label>
+      <input type="checkbox" id="darkMode">
+    </div>
+
+    <div class="setting-item">
+      <label for="language">Language</label>
+      <select id="language">
+        <option value="en" selected>English</option>
+        <option value="kn">Kannada</option>
+        <option value="hi">Hindi</option>
+      </select>
+    </div>
+
+    <div class="setting-item">
+      <button id="clearCache" class="btn">Clear Cache</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <!-- Help Sidebar (Right) -->
+  <div id="helpSidebar" class="sidebar right">
+    <div class="sidebar-header">
+      <h2>Help & Info</h2>
+    </div>
+
+    <div class="sidebar-content">
+      <h3>How to Use Smart-E-Bin</h3>
+      <p>
+        1️⃣ Scan the QR code on a nearby Smart E-Bin.<br>
+        2️⃣ Drop your e-waste items (old phones, chargers, laptops).<br>
+        3️⃣ Earn rewards and track your contribution.<br>
+        4️⃣ Help reduce pollution and support recycling! 🌿
+      </p>
+
+      <h3>About Physical E-Waste Management</h3>
+      <p>
+        This app helps users dispose of e-waste responsibly through Smart Bins and rewards eco-friendly behavior.
+      </p>
+
+      <h3>Contact Us</h3>
+      <p>
+        📞 Contact: <b>546413165651</b><br />
+        💬 WhatsApp: <b>54654313164</b>
+      </p>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay"></div>
+
+  <!-- JS -->
+  <script>
+    const profileIcon = document.getElementById('profileIcon');
+    const helpIcon = document.getElementById('helpIcon');
+    const profileSidebar = document.getElementById('profileSidebar');
+    const helpSidebar = document.getElementById('helpSidebar');
+    const overlay = document.getElementById('overlay');
+
+    // Open Profile Sidebar (left)
+    profileIcon.addEventListener('click', () => {
+      profileSidebar.classList.add('active');
+      overlay.classList.add('active');
+    });
+
+    // Open Help Sidebar (right)
+    helpIcon.addEventListener('click', () => {
+      helpSidebar.classList.add('active');
+      overlay.classList.add('active');
+    });
+
+    // Close both when clicking outside
+    overlay.addEventListener('click', () => {
+      profileSidebar.classList.remove('active');
+      helpSidebar.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+    
+  </script>
+  <script>
+  document.getElementById("scanner-icon").addEventListener("click", () => {
+    window.location.href = "scanner.html";
+  });
+
+   document.getElementById("scanner-icon1").addEventListener("click", () => {
+    window.location.href = "scanner.html";
+  });
+</script>
+<script>
+  // Function to open the image popup
+  function openMapImage() {
+    // Replace this URL with your actual photo link
+    const imageUrl = "https://res.cloudinary.com/dvf6yetek/image/upload/v1760463358/WhatsApp_Image_2025-10-14_at_23.05.32_6ae8897d_xgsgvk.jpg";
+    document.getElementById("mapImage").src = imageUrl;
+    document.getElementById("mapImageContainer").style.display = "flex";
+  }
+
+  // Function to close the popup
+  function closeMapImage() {
+    document.getElementById("mapImageContainer").style.display = "none";
+  }
+
+  // Attach event to your Nearby E-bin icon
+  document.addEventListener("DOMContentLoaded", () => {
+    const mapIcon = document.querySelector(".fa-location-dot"); 
+    if (mapIcon) {
+      mapIcon.addEventListener("click", openMapImage);
+    }
+  });
+</script>
+
+
+<script>
+  function openLeaderboard() {
+    document.getElementById("leaderboardScreen").classList.add("active");
+  }
+
+  function closeLeaderboard() {
+    document.getElementById("leaderboardScreen").classList.remove("active");
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const leaderboardIcon = document.querySelector(".fa-trophy");
+    if (leaderboardIcon) {
+      leaderboardIcon.addEventListener("click", openLeaderboard);
+    }
+  });
+</script>
+
+
+
+<script>
+  // Rewards popup open/close
+  document.getElementById("rewardsIcon").addEventListener("click", function() {
+    document.getElementById("rewardsPopup").style.display = "flex";
+  });
+
+  document.getElementById("closeRewards").addEventListener("click", function() {
+    document.getElementById("rewardsPopup").style.display = "none";
+  });
+
+  // Scratch card logic
+  const canvas = document.getElementById("scratchCanvas");
+  const ctx = canvas.getContext("2d");
+  const scratchArea = document.getElementById("scratchArea");
+
+  function resizeCanvas() {
+    canvas.width = scratchArea.offsetWidth;
+    canvas.height = scratchArea.offsetHeight;
+    ctx.fillStyle = "#888";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.globalCompositeOperation = "destination-out";
+  }
+
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+
+  let isDrawing = false;
+
+  canvas.addEventListener("mousedown", () => isDrawing = true);
+  canvas.addEventListener("mouseup", () => isDrawing = false);
+  canvas.addEventListener("mousemove", draw);
+
+  function draw(e) {
+    if (!isDrawing) return;
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    ctx.beginPath();
+    ctx.arc(x, y, 20, 0, Math.PI * 2);
+    ctx.fill();
+  }
+</script>
+
+
+<script>
+  const settingsIcon = document.getElementById("settingsIcon"); // your bottom nav icon
+  const settingsPopup = document.getElementById("settingsPopup");
+  const closeSettings = document.getElementById("closeSettings");
+
+  // Open settings popup
+  settingsIcon.addEventListener("click", () => {
+    settingsPopup.style.display = "flex";
+  });
+
+  // Close settings popup
+  closeSettings.addEventListener("click", () => {
+    settingsPopup.style.display = "none";
+  });
+
+  // Optional: Clear cache demo action
+  document.getElementById("clearCache").addEventListener("click", () => {
+    alert("Cache cleared successfully!");
+  });
+
+  // Optional: Dark mode toggle
+  const darkModeToggle = document.getElementById("darkMode");
+  darkModeToggle.addEventListener("change", () => {
+    if (darkModeToggle.checked) {
+      document.body.style.background = "#111";
+      document.body.style.color = "#fff";
+    } else {
+      document.body.style.background = "#f5f5f5";
+      document.body.style.color = "#000";
+    }
+  });
+</script>
+
+<script>
+  const nearbyIcon = document.getElementById("nearbyMapIcon"); // your bottom nav icon
+  const nearbyPopup = document.getElementById("nearbyPopup");
+  const nearbyImage = document.getElementById("nearbyImage");
+  const closeNearby = document.getElementById("closeNearby");
+
+  // Open Nearby E-bin popup
+  nearbyIcon.addEventListener("click", () => {
+    // Replace with your map/photo link
+    nearbyImage.src = "https://res.cloudinary.com/dvf6yetek/image/upload/v1760463358/WhatsApp_Image_2025-10-14_at_23.05.32_6ae8897d_xgsgvk.jpg";
+    nearbyPopup.style.display = "flex";
+  });
+
+  // Close popup
+  closeNearby.addEventListener("click", () => {
+    nearbyPopup.style.display = "none";
+  });
+</script>
+
 </body>
 </html>
+
+

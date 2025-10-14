@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refer & Earn - E-Waste Management</title>
+  <link rel="stylesheet" href="refer.css" />
+</head>
+<body>
+  <header class="refer-header">
+    <h2>Refer & Earn</h2>
+    <a href="index.html" class="back-button">← Back</a>
+  </header>
+
+  <main class="refer-container">
+    <div class="refer-card">
+      <h3>Invite your friends and earn rewards!</h3>
+      <p>For every friend who joins and submits e-waste, you’ll earn <b>₹50</b> reward points.</p>
+
+      <div class="referral-box">
+        <label>Your Referral Code:</label>
+        <div class="code-area">
+          <span id="referral-code">EW12345</span>
+          <button id="copy-btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="share-section">
+        <p>Share your code with friends:</p>
+        <button id="share-btn">Share Now</button>
+      </div>
+    </div>
+
+    <div id="success-message" class="hidden">
+      ✅ Referral code copied successfully!
+    </div>
+  </main>
+
+  <script src="refer.js"></script>
+</body>
+</html>
